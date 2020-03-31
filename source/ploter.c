@@ -1,0 +1,37 @@
+#include "toolbox/toolbox.h"
+#include "toolbox/swi.h"
+
+#define TEXT_HEIGHT 100
+#define TEXT_WIDTH 30
+#define TEXT_PIVOT_LEFT 80
+#define LINE_WIDTH 10
+#define DOT_HEIGHT 20
+#define DOT_SPACE 20
+#define H_COLOR CLR_RED
+#define I_COLOR CLR_LIME
+#define SPACE_BETWEEN_LETTERS 15
+
+int main(void){
+	REG_DISPCNT= DCNT_MODE3 | DCNT_BG2;
+
+	for (int i=SCREEN_HEIGHT-TEXT_HEIGHT-((SCREEN_HEIGHT-TEXT_HEIGHT)/2); i<SCREEN_HEIGHT-((SCREEN_HEIGHT-TEXT_HEIGHT)/2); i++) {
+		for (int j=0; j<LINE_WIDTH; j++) {
+			m3_plot(TEXT_PIVOT_LEFT+j, i, H_COLOR);
+			if (i >= SCREEN_HEIGHT-TEXT_HEIGHT/2-LINE_WIDTH/2-((SCREEN_HEIGHT-TEXT_HEIGHT)/2)) m3_plot(TEXT_PIVOT_LEFT+TEXT_WIDTH+j, i, H_COLOR);
+			if (i >= SCREEN_HEIGHT-TEXT_HEIGHT-((SCREEN_HEIGHT-TEXT_HEIGHT)/2)+DOT_HEIGHT+DOT_SPACE+LINE_WIDTH/2 || i <= SCREEN_HEIGHT-TEXT_HEIGHT-((SCREEN_HEIGHT-TEXT_HEIGHT)/2)+DOT_HEIGHT) m3_plot(TEXT_PIVOT_LEFT+TEXT_WIDTH+SPACE_BETWEEN_LETTERS+LINE_WIDTH+j, i, I_COLOR);
+		}
+
+	}
+	for (int i=TEXT_PIVOT_LEFT+LINE_WIDTH; i<TEXT_PIVOT_LEFT+TEXT_WIDTH; i++) {
+		for (int j=-LINE_WIDTH/2; j<LINE_WIDTH/2; j++) {
+			m3_plot(i, TEXT_PIVOT_LEFT+j, H_COLOR);
+		}
+	}
+
+	Halt();
+    return 0;
+}
+
+void Halt()
+{   swi_call(0x02); }
+

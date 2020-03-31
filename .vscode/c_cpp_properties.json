@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "name": "GBA",
+            "includePath": [
+                "${env:DevKitPRO}/libgba/include"
+            ],
+            "intelliSenseMode": "msvc-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

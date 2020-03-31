@@ -1,0 +1,14 @@
+{
+    "runOnSave.statusMessageTimeout": 3000,
+    "runOnSave.commands": [
+        {
+            "match": "ploter.c",
+            "command": "make -C ${workspaceFolder} && ${workspaceFolder}/No$GBADebugger/NO$GBA.exe ${workspaceFolder}/DevKitARMGBA.gba",
+            "runningStatusMessage": "yopyop",
+            "runIn": "backend"
+        },
+    ],
+    "files.associations": {
+        "swi.h": "c"
+    }
+}

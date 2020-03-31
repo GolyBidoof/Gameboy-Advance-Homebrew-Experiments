@@ -1,0 +1,14 @@
+build/DevKitARMGBA.map
+build/ploter.d
+build/ploter.o
+build/template.d
+build/template.map
+build/template.o
+No$GBADebugger/NO$GBA.CHT
+No$GBADebugger/NO$GBA.EXE
+No$GBADebugger/NO$GBA.INP
+No$GBADebugger/BATTERY/GameCubeGrandPrix.SAV
+No$GBADebugger/BATTERY/Mario Kart DS (European ROM).SAV
+DevKitARMGBA.elf
+DevKitARMGBA.gba
+template.pnproj
