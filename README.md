@@ -12,6 +12,4 @@ It advances a bit further than the third chapter of Tonc, puts CPU in halt after
 Change constants on top of ploter.c, make and run in an emulator.
 
 ## Screenshots
-
-Different results can look like this:
-![](https://i.imgur.com/vSULmXf.png)![](https://i.imgur.com/OSaZfPt.png)![](https://i.imgur.com/8JLEdIx.png)
+![One](https://i.imgur.com/vSULmXf.png)![Two](https://i.imgur.com/OSaZfPt.png)![Three](https://i.imgur.com/8JLEdIx.png)
